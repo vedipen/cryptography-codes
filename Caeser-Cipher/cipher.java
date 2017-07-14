@@ -33,3 +33,17 @@ public class Main {
 		System.out.println("Decrypted Message - " + plaintext);
 	}
 }
+
+/*
+Input - 
+qwertyuiopasdfghjklzxcvbnm
+25
+
+Output - 
+Encryption in Process...
+Encryption Completed.
+Cipher generated is - PVDQSXTHNOZRCEFGIJKYWBUAML
+Decryption in Process...
+Decryption Completed.
+Decrypted Message - qwertyuiopasdfghjklzxcvbnm
+*/
