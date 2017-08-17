@@ -34,7 +34,7 @@ public class Bob {
     System.out.println("Public Key p is : "+p);
     System.out.println("Public Key g is : "+g);
     System.out.println("Private Key of Bob is : "+y);
-    String serverName="localhost";
+    // String serverName="localhost";
     // System.out.print("Enter Server Name to connect to (default - 'localhost') : ");
     // String serverNameTemp = br.readLine();
     // if(serverNameTemp.length()!=0) {
@@ -53,8 +53,8 @@ public class Bob {
       DataOutputStream out = new DataOutputStream(outToServer);
       int r2=findR2();
       int r1 = Integer.parseInt(in.readUTF());
-      System.out.println("R1 recieved from Alice is "+r1);
-      System.out.println("Sending R2 to Alice");
+      System.out.println("R3 recieved from Eve is "+r1);
+      System.out.println("Sending R2 to Eve");
       out.writeUTF(r2+"");
       // out.writeUTF("Hello from " + client.getLocalSocketAddress());
       int k = generateKey(r1);
@@ -62,7 +62,7 @@ public class Bob {
       String cipher = in.readUTF();
       System.out.println("Cipher recieved is " + cipher);
       String plainText = decrypt(cipher,k);
-      System.out.println("Message sent from Alice is "+plainText);
+      System.out.println("Message sent from Eve is "+plainText);
       client.close();
     }catch(IOException e) {
       System.out.println("Errrr! Couldn't connect. Stats -->");
