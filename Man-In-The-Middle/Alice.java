@@ -30,7 +30,7 @@ public class Alice {
     System.out.println("Public Key p is : "+p);
     System.out.println("Public Key g is : "+g);
     System.out.println("Private Key of Alice is : "+x);
-    // String serverName="localhost";
+    String serverName="localhost";
     // System.out.print("Enter Server Name to connect to (default - 'localhost') : ");
     // String serverNameTemp = br.readLine();
     // if(serverNameTemp.length()!=0) {
