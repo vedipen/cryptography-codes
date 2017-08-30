@@ -2,7 +2,7 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-public class Main {
+public class cipher {
 	public static void main (String[] args) throws java.lang.Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String s = br.readLine();
@@ -17,7 +17,7 @@ public class Main {
 		}
 		System.out.println("Encryption Completed.");
 		System.out.println("Cipher generated is - " + cipher);
-		
+
 		// Decryption
 		System.out.println("Decryption in Process...");
 		in = new StringTokenizer(cipher.replaceAll(""," "));
@@ -26,7 +26,7 @@ public class Main {
 			long z=((in.nextToken().toLowerCase().charAt(0)-'a'-k+26));
 			if(z>=25) {
 				z%=26;
-			} 
+			}
 			plaintext+=(char)(z+'a');
 		}
 		System.out.println("Decryption Completed.");
@@ -35,11 +35,11 @@ public class Main {
 }
 
 /*
-Input - 
+Input -
 qwertyuiopasdfghjklzxcvbnm
 25
 
-Output - 
+Output -
 Encryption in Process...
 Encryption Completed.
 Cipher generated is - PVDQSXTHNOZRCEFGIJKYWBUAML

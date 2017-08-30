@@ -42,15 +42,16 @@ int main() {
 	cout<<"Encrypted Message is - "<<endl;
 	cout<<enKey<<endl;
 	cout<<endl;
+
 	//DECRYPTION
-	cout<<"Enter key for decrytion (Length "<<n<<"): "<<endl;
+	cout<<"Enter key for decryption (Length "<<n<<"): "<<endl;
 	string deKey;
 	cin>>deKey;
 	k=0;
 	//Rotate cyclicly
-	for(ll i=0;i<deKey.size();i++) {
-		deKey[i]=((((ll)(deKey[i]-'0')+1)%n)+1)+'0';
-	}
+	// for(ll i=0;i<deKey.size();i++) {
+	// 	deKey[i]=((((ll)(deKey[i]-'0')+1)%n)+1)+'0';
+	// }
 	for(ll j=0;j<col;j++) {
 		for(ll i=0;i<n;i++) {
 			v[i][j]=(enKey[k]);
@@ -58,12 +59,6 @@ int main() {
 			if(k==enKey.size()) break;
 		}
 		if(k==enKey.size()) break;
-	}
-	for(ll j=0;j<col;j++) {
-		for(ll i=0;i<n;i++) {
-			cout<<v[i][j]<<" ";
-		}
-		cout<<endl;
 	}
 	string finalDe="";
 	for(ll i=0;i<col;i++) {
@@ -73,7 +68,7 @@ int main() {
 	}
 	cout<<"Decrypted Message is - "<<endl;
 	cout<<finalDe<<endl;
-	if(enKey==deKey) {
+	if(key==deKey) {
 		cout<<"Encryption, decryption successful"<<endl;
 	} else {
 		cout<<"Encryption, decryption unsuccessful"<<endl;
