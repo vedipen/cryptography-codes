@@ -3,6 +3,11 @@
 [Back](../../../)
 
 ### Run
+```
+java Eve  
+java Alice  
+java Bob
+```
 
 ##### Terminal Window 1 (Server) -
 ![alt text](ServerEve.png "Output Server")
